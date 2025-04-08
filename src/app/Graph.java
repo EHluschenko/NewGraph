@@ -15,11 +15,15 @@ public class Graph {
             addVertex(list);
 
 
+
+
             // Додаємо ребра
             addEdge(list, 0, 1);
             addEdge(list, 0, 2);
             addEdge(list, 0, 3);
             addEdge(list, 1, 2);
+
+            deleteVertex(list, 2);
 
             printGraph(list);
         }
@@ -34,6 +38,11 @@ public class Graph {
 
         static void addVertex(ArrayList<ArrayList<Integer>> list){
             list.add(new ArrayList<>());
+        }
+
+        static void deleteVertex(ArrayList<ArrayList<Integer>> list, int key){
+
+           list.remove(2);
         }
 
         static void printGraph(ArrayList<ArrayList<Integer>> list) {
