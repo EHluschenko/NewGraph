@@ -12,6 +12,9 @@ public class Graph {
             for (int i = 0; i < v; i++)
                 list.add(new ArrayList<>());
 
+            addVertex(list);
+
+
             // Додаємо ребра
             addEdge(list, 0, 1);
             addEdge(list, 0, 2);
@@ -27,6 +30,10 @@ public class Graph {
                             int start, int destination) {
             list.get(start).add(destination);
             list.get(destination).add(start);
+        }
+
+        static void addVertex(ArrayList<ArrayList<Integer>> list){
+            list.add(new ArrayList<>());
         }
 
         static void printGraph(ArrayList<ArrayList<Integer>> list) {
